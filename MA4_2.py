@@ -24,7 +24,7 @@ def main():
 	pyTime = []
 	numbaTime = []
 	cppTime = []
-	for i in range(20, 30):
+	for i in range(47):
 		# start = pc()
 		# fib(i)
 		# end = pc()
