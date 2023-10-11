@@ -24,7 +24,7 @@ def main():
 	pyTime = []
 	numbaTime = []
 	cppTime = []
-	for i in range(47):
+	for i in range(47, 48):
 		# start = pc()
 		# fib(i)
 		# end = pc()
@@ -33,15 +33,17 @@ def main():
 
 
 		start = pc()
-		fib_numba(i)
+		res = fib_numba(i)
 		end = pc()
+		print(f' the result for cpp is: {res}')
 		numbaTime.append(end-start)
 		print(f'fib in python_numba took: {end-start} sec to run')
 		
 		start = pc()
 		f.set(i)
-		f.fib()
+		res = f.fib()
 		end = pc()
+		print(f' the result for cpp is: {res}')
 		cppTime.append(end-start)
 		print(f'fib in c++ took: {end-start} sec to run')
 
