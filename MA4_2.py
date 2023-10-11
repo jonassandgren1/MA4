@@ -8,7 +8,6 @@ def main():
 	f = Person(5)
 	print(f.get())
 
-
 	start = pc()
 	f.set(7)
 	print(f.fib())
