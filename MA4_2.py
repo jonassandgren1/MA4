@@ -24,7 +24,8 @@ def main():
 	pyTime = []
 	numbaTime = []
 	cppTime = []
-	for i in range(47, 48):
+	sweepingRange = range(47, 48)
+	for i in sweepingRange:
 		# start = pc()
 		# fib(i)
 		# end = pc()
@@ -48,9 +49,9 @@ def main():
 		print(f'fib in c++ took: {end-start} sec to run')
 
 	plt.figure()
-	plt.plot(range(20, 30), pyTime)  # Plot the chart 
-	plt.plot(range(20, 30), numbaTime)  # Plot the chart
-	plt.plot(range(20, 30), cppTime)  # Plot the chart
+	plt.plot(sweepingRange, pyTime)  # Plot the chart 
+	plt.plot(sweepingRange, numbaTime)  # Plot the chart
+	plt.plot(sweepingRange, cppTime)  # Plot the chart
 	plt.savefig("time.png") 
 	plt.show()
 
