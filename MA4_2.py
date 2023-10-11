@@ -3,8 +3,7 @@
 from person import Person
 from time import perf_counter as pc
 import matplotlib.pyplot as plt
-import numba
-
+from numba import njit
 
 @njit
 def main():
