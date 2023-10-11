@@ -24,7 +24,7 @@ def main():
 	pyTime = []
 	numbaTime = []
 	cppTime = []
-	sweepingRange = range(47, 48)
+	sweepingRange = range(40, 49)
 	for i in sweepingRange:
 		# start = pc()
 		# fib(i)
