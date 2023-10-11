@@ -25,11 +25,11 @@ def main():
 	numbaTime = []
 	cppTime = []
 	for i in range(20, 30):
-		start = pc()
-		fib(i)
-		end = pc()
-		pyTime.append(end-start)
-		print(f'fib in python took: {end-start} sec to run')
+		# start = pc()
+		# fib(i)
+		# end = pc()
+		# pyTime.append(end-start)
+		# print(f'fib in python took: {end-start} sec to run')
 
 
 		start = pc()
