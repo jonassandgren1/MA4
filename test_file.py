@@ -70,7 +70,7 @@ if __name__ == '__main__':
         n_new = [(1000000 // n_pros, d_new) for _ in range(n_pros)]
         start1 = pc()
         with future.ProcessPoolExecutor() as ex:
-            result = list(ex.map(monte_carlo_hyper, n_new))
+            result = list(ex.map(monte_carlo_hyper, n_new, d_new))
             for r in result:
                 print(r)
                 print(f'it took {end1-start1} sec')
