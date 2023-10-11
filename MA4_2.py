@@ -48,12 +48,12 @@ def main():
 		cppTime.append(end-start)
 		print(f'fib in c++ took: {end-start} sec to run')
 
-	plt.figure()
-	#plt.plot(sweepingRange, pyTime)  # Plot the chart 
-	plt.plot(sweepingRange, numbaTime)  # Plot the chart
-	plt.plot(sweepingRange, cppTime)  # Plot the chart
-	plt.savefig("time.png") 
-	plt.show()
+	# plt.figure()
+	# plt.plot(sweepingRange, pyTime)  # Plot the chart 
+	# plt.plot(sweepingRange, numbaTime)  # Plot the chart
+	# plt.plot(sweepingRange, cppTime)  # Plot the chart
+	# plt.savefig("time.png") 
+	# plt.show()
 
 
 
