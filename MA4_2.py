@@ -5,6 +5,8 @@ from time import perf_counter as pc
 import matplotlib.pyplot as plt
 import numba
 
+
+@njit
 def main():
 	f = Person(5)
 	print(f.get())
