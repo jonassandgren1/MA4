@@ -31,7 +31,7 @@ def main():
 	numbaTime = []
 	cppTime = []
 	fib_numba(2)
-	sweepingRange = range(20, 30)
+	sweepingRange = range(30, 45)
 	for i in sweepingRange:
 		start = pc()
 		fib(i)
@@ -60,7 +60,7 @@ def main():
 	plt.plot(sweepingRange, pyTime)  # Plot the chart 
 	plt.plot(sweepingRange, numbaTime)  # Plot the chart
 	plt.plot(sweepingRange, cppTime)  # Plot the chart
-	plt.savefig("time.png") 
+	plt.savefig("time_30-45.png") 
 	plt.show()
 
 
