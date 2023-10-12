@@ -1,3 +1,9 @@
+"""Student: Jonas Sandgren
+Mail: jonas.sandgren.8503@student.uu.se
+Reviewed by:Naser
+Date reviewed:12-10-2023"""
+
+
 #!/usr/bin/env python3
 
 from person import Person
@@ -24,13 +30,13 @@ def main():
 	pyTime = []
 	numbaTime = []
 	cppTime = []
-	sweepingRange = range(40, 49)
+	sweepingRange = range(20, 30)
 	for i in sweepingRange:
-		# start = pc()
-		# fib(i)
-		# end = pc()
-		# pyTime.append(end-start)
-		# print(f'fib in python took: {end-start} sec to run')
+		start = pc()
+		fib(i)
+		end = pc()
+		pyTime.append(end-start)
+		print(f'fib in python took: {end-start} sec to run')
 
 
 		start = pc()
@@ -49,11 +55,12 @@ def main():
 		print(f'fib in c++ took: {end-start} sec to run')
 
 	plt.figure()
-	#plt.plot(sweepingRange, pyTime)  # Plot the chart 
+	plt.yscale('log')
+	plt.plot(sweepingRange, pyTime)  # Plot the chart 
 	plt.plot(sweepingRange, numbaTime)  # Plot the chart
 	plt.plot(sweepingRange, cppTime)  # Plot the chart
 	plt.savefig("time.png") 
-	#plt.show()
+	plt.show()
 
 
 

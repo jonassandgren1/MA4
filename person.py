@@ -1,3 +1,9 @@
+"""Student: Jonas Sandgren
+Mail: jonas.sandgren.8503@student.uu.se
+Reviewed by:Naser
+Date reviewed:12-10-2023"""
+
+
 """ Python interface to the C++ Person class """
 import ctypes
 lib = ctypes.cdll.LoadLibrary('./libperson.so')

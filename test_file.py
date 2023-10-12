@@ -1,3 +1,9 @@
+"""Student: Jonas Sandgren
+Mail: jonas.sandgren.8503@student.uu.se
+Reviewed by:Naser
+Date reviewed:12-10-2023"""
+
+
 import random
 import math
 import matplotlib.pyplot as plt
@@ -17,7 +23,7 @@ import matplotlib.pyplot as plt
 
 #     pi_approx = 4 * nc / n
 
-#     print(f"Number of points inside the circle: {nc}")
+#     # print(f"Number of points inside the circle: {nc}")
 #     print(f"Approximation of π: {pi_approx}")
 #     print(f"Builtin constant π: {math.pi}")
 
@@ -25,9 +31,9 @@ import matplotlib.pyplot as plt
 #     plt.scatter(*zip(*points_inside), color='red')
 #     plt.scatter(*zip(*points_outside), color='blue')
 #     plt.gca().set_aspect('equal', adjustable='box')
-#     #plt.savefig('monte_carlo_pi.png')
+#     plt.savefig('monte_carlo_pi.png')
 
-# monte_carlo_pi(10000)  # Change this to the number of points you want to generate
+# monte_carlo_pi(100000)  # Change this to the number of points you want to generate
 
 from functools import reduce
 import time
@@ -66,13 +72,10 @@ if __name__ == '__main__':
     print(f'process took: {end-start} sec')
 
     for n_pros in [10]:
-        d_new = [d] * len(n_new)
-        n_new = [(1000000 // n_pros, d_new) for _ in range(n_pros)]
-        start1 = pc()
-        with future.ProcessPoolExecutor() as ex:
-            result = list(ex.map(monte_carlo_hyper, n_new))
-            for r in result:
-                print(r)
-                print(f'it took {end1-start1} sec')
-        end1 = pc()
-        print(f'for {n_pros} number of threads, it took {end1-start1} sec')
+        d_new = [d]
+        n_new = [n // n_pros for _ in range(n_pros)]
+        start = pc()
+        with future.ThreadPoolExecutor() as ex:
+            result = list(ex.map(monte_carlo_hyper, n_new, d_new))
+        end = pc()
+        print(f'for {n_pros} number of threads, it took {end-start} sec')
