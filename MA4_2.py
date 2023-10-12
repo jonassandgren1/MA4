@@ -30,6 +30,7 @@ def main():
 	pyTime = []
 	numbaTime = []
 	cppTime = []
+	fib_numba(2)
 	sweepingRange = range(20, 30)
 	for i in sweepingRange:
 		start = pc()
